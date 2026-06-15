@@ -119,12 +119,37 @@
 
 ---
 
+### Prompt 8
+**使用者：**
+> 繼續推送到 https://github.com/winnieshih1107/2330 / README.md 內容為空
+
+**處理：**
+- 解決本地分支歷史衝突，將進度完美推送到 `main` 與 `master` 分支。
+- 撰寫了結構清晰、包含模型指標與視覺化導航的專案說明文件 `README.md`，解決內容空白的問題。
+
+---
+
+### Prompt 9
+**使用者：**
+> PREDICT FUTURE 30 DAYS, need PLOT 喇叭圖
+
+**處理：**
+- 更新 `predict_compare.py`，新增未來 30 天股價多步預測。
+- **ARIMA**：使用 `get_forecast` 生成未來 30 天預測中心值，並導出 68% 和 95% 信賴區間（CI）。
+- **sklearn AR**：對 `LinearRegression` 進行遞迴預測（Recursive Forecasting），生成 30 天預測值。
+- **視覺化**：繪製預測「喇叭圖」並存為 `future_forecast.png`，以紅色虛線作為預測起點，向右展開兩層信賴區間陰影區。
+- **程式碼優化**：修復了 sklearn 特徵名稱警告 (UserWarning) 並在頂部添加警告過濾器，使控制台輸出更為清爽。
+- **更新說明文件**：更新 `README.md` 並嵌入全新的喇叭圖效果。
+
+---
+
 ## 產出檔案
 
 | 檔案 | 路徑 |
 |---|---|
 | 主程式 | `D:\wi\L10_2330\predict_compare.py` |
-| 比較圖表 | `D:\wi\L10_2330\comparison.png` |
+| 歷史驗證圖 | `D:\wi\L10_2330\comparison.png` |
+| 30天預測喇叭圖 | `D:\wi\L10_2330\future_forecast.png` |
 | 準則文件 | `D:\wi\L10_2330\CLAUDE.md` |
 | Session Log | `D:\wi\L10_2330\log.md` |
 | GitHub | https://github.com/winnieshih1107/2330 |
